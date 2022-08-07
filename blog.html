@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratorio # 1 Redes</title>
+  <link href="css/blog.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+
+
+  <div class="name">
+    <div class="img">
+      <img src="images/Wiki-1-1.jpg" alt="">
+    </div>
+    <div class="content">
+      <p class="p1">Laboratorio #1 Redes</p>
+      <p class="p2">Desarrollo y solucion propuesta para el laboratorio #1 de la materia Redes, del grupo #6 conformado
+        por:
+        <br>
+        - Farouk Abdala
+        <br>
+        - Julian Pulido
+        <br>
+        - Gabriel Jimenez
+        <br>
+        Tambien se acompañara esta Wiki con las imagenes mas representativas del desarrollo del laboratorio, y una
+        conclusion.
+      </p>
+    </div>
+  </div>
+
+  <div class="info">
+    <div class="img">
+      <img src="images/Wiki-1-2.jpg" alt="">
+    </div>
+    <p class="Tituloseccion">PROBLEMATICA</p>
+    <p class="informacion">En este laboratorio se buscará hacer uso de las herramientas y conocimientos adquiridos en
+      los cursos ofrecidos por
+      Cisco para solucionar problemáticas cotidianas relacionadas con la temática tratada en Redes y Comunicación de
+      datos.
+
+      Para este caso, se tiene a una familia, la familia Pérez que desea instalar un servicio de internet que brinde
+      acceso al
+      servicio a los diferentes dispositivos en el hogar. Para este laboratorio se hará la prueba de conexión a internet
+      con
+      la página Cisco.com, para así comprobar si los dispositivos tienen acceso a internet.
+    </p>
+    <br>
+  </div>
+
+
+  <div class="info2">
+    <p class="Tituloseccion">DESARROLLO</p>
+    <p class="informacion">Para empezar, se colocó los principales elementos necesarios para poder lograr un
+      funcionamiento por vía inalámbrica del
+      servicio de internet en el hogar de la Familia Pérez. Estos son:
+      <br>
+      <br>
+      - Un PC de torre que funcione como ordenador principal del hogar (Se encuentra en End Devices > End Devices > PC)
+      <br>
+      - Un Router que brinde señal inalámbrica de internet en el hogar. (Se encuentra en Network Devices > Wireless
+      Devices >Home Router)
+      <br>
+      - Un Cable Modem para modular las señales de datos que halla en el hogar y demodular las que se reciban para un
+      correcto Funcionamiento del servicio. (Se encuentra en Network Devices > WAN Emulation > Cable Modem)
+      <br>
+      - La nube de internet que funcionara como servicio de almacenamiento y procesamiento de datos. (Se encuentra en
+      Network Devices > WAN Emulation > PT-Cloud)
+      <br>
+      - Y un servidor que funcionara como medio de almacenamiento y de respuesta a los datos enviados por la nube. (Se
+      encuentra en End Devices > End Devices > Server)
+      <br>
+      <br>
+      Lo primero que se hizo con estos elementos fue renombrarlas para organizar de mejor manera el laboratorio.
+    </p>
+
+  </div>
+
+  <div class="info3">
+    <p class="Tituloseccion">CONEXION</p>
+    <p class="informacion">A continuación, se conectaron los elementos mencionados de la siguiente manera:
+      <br>
+      <br>
+      - PC (FastEthernet0) > Cable directo de cobre > Router Wireless (Gigabit Ethernet 1)
+      <br>
+      - Router Wireless (Internet) > Cable directo de cobre > Cable Modem (Port 1)
+      <br>
+      - Cable Modem (Port 0) > Cable de cobre Coaxial > Nube de Internet (Coaxial7)
+      <br>
+      - Nube de Internet (Ethernet6) > Cable directo de cobre > Servidor de “Cisco.com” (FastEthernet0)
+    </p>
+  </div>
+
+
+  <div class="info4">
+    <div class="img">
+      <img src="images/Wiki-1-5.jpg" alt="">
+    </div>
+    <p class="Tituloseccion">CONFIGURACION</p>
+    <p class="informacion">Después, se procedió a iniciar con la configuración de los dispositivos.
+      <br>
+      El primero fue el servidor. Para este se realizaron las siguientes modificaciones de configuración con base a lo
+      aprendido u obtenido en el curso “Comenzando con Packet Tracer” ofrecido por la empresa Cisco en su página web.
+      Las
+      configuraciones realizadas fueron las siguientes:
+      <br>
+      - Se asignó una IP estática al servidor la cual fue: 209.165.200.224
+      <br>
+      - Se asigno un dominio al servidor activando el DNS del mismo para así permitir el acceso externo. Los dominios
+      asignados
+      fueron: Cisco.com y www.Cisco.com, ambos con una dirección 209.165.200.225.
+      <br>
+      - Se activo de igual la manera el servicio de DHCP para que los otros equipos al conectarse a la red obtengan una
+      direccion IP por medio de este protocolo.
+      <br>
+      - Se les asignaron valores de Default Gateway y de Subnet Mask a la configuración del servidor siendo
+      209.165.200.225 y
+      255.255.255.224 respectivamente.
+    </p>
+  </div>
+
+
+
+  <div class="info5">
+    <p class="Tituloseccion">CONFIGURACION</p>
+    <p class="informacion">A los dispositivos de la nube de internet, Cable_Modem no se les realizaron mayor
+      configuración, que sus
+      correspondientes conexiones.
+      <br>
+      Al Router_Fa. Pérez, en la pestaña de GUI se realizó la configuración de la red, cambiando su nombre default por
+      “Familia_Perez”.
+    </p>
+  </div>
+
+  <div class="info6">
+    <div class="img">
+      <img src="images/Wiki-1-7.jpg" alt="">
+    </div>
+    <p class="Tituloseccion">CONFIGURACION</p>
+    <p class="informacion">El último en configurar de estos equipos fue el Pc_Familia_Perez al cual se le encendió la
+      opción de realizar DHCP para poder obtener una direccion IP al momento de conectarse a la red. Luego de esto por
+      medio de la opción de Web Browser en Desktop se accedió al sitio de www.Cisco.com, lo cual fue exitoso.
+    </p>
+  </div>
+
+  <div class="info7">
+    <div class="img">
+      <img src="images/Wiki-1-8.jpg" alt="">
+    </div>
+    <p class="Tituloseccion">CONEXION</p>
+    <p class="informacion">A continuación, se conectaron los dispositivos inalámbricos de la casa, los cuales son:
+      <br>
+      - Laptop del Sr Pérez
+      <br>
+      - Laptop de Juanita
+      <br>
+      - Smartphone de Pérez Jr.
+      <br>
+      - Smartphone de Sra. Pérez
+    </p>
+  </div>
+
+  <div class="info8">
+    <div class="img">
+      <img src="images/Wiki-1-9.jpg" alt="">
+    </div>
+    <p class="Tituloseccion">CONEXION</p>
+    <p class="informacion">A estos dispositivos también se les realizaron sus configuraciones propias.
+      <br>
+      - La laptop del Sr Pérez se apagó, luego se le realizo el cambio de su tarjeta LAN y se intercambió por una
+      tarjeta
+      WPC300N, luego de volver a encender el portátil, se activó la conexión de pc Wireless, se buscó la red
+      “Familia_Perez” y
+      se conectó. Luego por medio de la opción de Web Browser en Desktop se accedió al sitio de www.Cisco.com, lo cual
+      fue
+      exitoso.
+      <br>
+      - La laptop de Juanita se apagó, luego se le realizo el cambio de su tarjeta LAN y se intercambió por una tarjeta
+      WPC300N, luego de volver a encender el portátil, se activó la conexión de pc Wireless, se buscó la red
+      “Familia_Perez” y
+      se conectó. Luego por medio de la opción de Web Browser en Desktop se accedió al sitio de www.Cisco.com, lo cual
+      fue
+      exitoso.
+    </p>
+  </div>
+
+  <div class="info9">
+    <p class="Tituloseccion">CONEXION</p>
+    <p class="informacion">
+      - Al Smartphone de Pérez Jr. Se le activo la opción de Wireless0, y se cambió su SSDI por “Familia_Perez” el cual
+      es el
+      nombre la red a la cual se debe conectar. Luego por medio de la opción de Web Browser en Desktop se accedió al
+      sitio de
+      www.Cisco.com, lo cual fue exitoso.
+      <br>
+      - Al Smartphone de la Sra. Pérez. Se le activo la opción de Wireless0, y se cambió su SSDI por “Familia_Perez” el
+      cual
+      es el nombre la red a la cual se debe conectar. Luego por medio de la opción de Web Browser en Desktop se accedió
+      al
+      sitio de www.Cisco.com, lo cual fue exitoso.
+
+    </p>
+  </div>
+
+  <div class="info10">
+    <p class="Tituloseccion">CONCLUSION</p>
+    <p class="informacion"> Para concluir podemos afirmar, que es extremadamente importante tener conocimiento de los
+      procesos que se necesitan al momento de conectar cualquier End device a una red. Para esto tomamos en cuenta el
+      protocolo DHCP, el cual se tuvo que habilitar en el Servidor, para que cuando un End device se conectara, pudiera
+      obtener una IP generada por el servidor.
+
+    </p>
+  </div>
+
+
+  <script>
+    var btn = document.getElementById('boton2');
+
+    function IrAInfo() {
+      window.location.href = "Info.html";
+    }
+    btn.addEventListener('click', IrAInfo, true);
+  </script>
+
+</body>
+
+<style>
+  #boton2 {
+    border-radius: 25%;
+    color: #ffffff;
+    background-color: #c293ff;
+  }
+</style>
+
+
+</html>
